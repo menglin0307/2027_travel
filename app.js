@@ -3,16 +3,18 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxNFC3OBTDQMROx4Qe1I
 const form = document.querySelector("#signup-form");
 const status = document.querySelector("#form-status");
 const submitFrame = document.querySelector('iframe[name="submit-frame"]');
+const successDialog = document.querySelector("#success-dialog");
 let waitingForResponse = false;
 
 submitFrame.addEventListener("load", () => {
   if (!waitingForResponse) return;
   waitingForResponse = false;
   form.querySelector('button[type="submit"]').disabled = false;
-  status.textContent = "報名資料已送出，謝謝！";
+  status.textContent = "報名資料已送出~";
   status.dataset.state = "success";
   form.reset();
   form.elements.participants.value = "1";
+  successDialog.showModal();
 });
 
 form.addEventListener("submit", (event) => {

@@ -30,13 +30,34 @@
             <span class="section-kicker">TRIP PLAN</span>
             <h2>行程亮點</h2>
           </div>
-          <div class="date-chip"><span aria-hidden="true">✦</span> 2027.1.1</div>
-          <ol class="itinerary">
-            <li><time>09:00</time><span>台中機場集合出發</span></li>
-            <li><time>11:00</time><span>抵達沖繩</span></li>
-            <li><time>12:00</time><span>午餐時間</span></li>
-            <li><time>14:00</time><span>商場逛街</span></li>
-          </ol>
+          <div class="trip-day">
+            <div class="date-chip"><span aria-hidden="true">✦</span> 2027.1.1</div>
+            <ol class="itinerary">
+              <li><time>09:00</time><span>台中機場集合出發</span></li>
+              <li><time>11:00</time><span>抵達沖繩</span></li>
+              <li><time>12:00</time><span>午餐時間</span></li>
+              <li><time>14:00</time><span>商場逛街</span></li>
+              <li><time>17:00</time><span>飯店 check in 後晚餐自理</span></li>
+            </ol>
+          </div>
+          <div class="trip-day">
+            <div class="date-chip"><span aria-hidden="true">✦</span> 2027.1.2</div>
+            <ol class="itinerary">
+              <li><time>09:00</time><span>飯店大廳集合出發</span></li>
+              <li><time>10:00</time><span>海游館半日遊</span></li>
+              <li><time>13:00</time><span>海游館門口集合出發至 outlet</span></li>
+              <li><time>14:00</time><span>逛街囉～血拚囉～自行決定回飯店時間</span></li>
+            </ol>
+          </div>
+          <div class="trip-day">
+            <div class="date-chip"><span aria-hidden="true">✦</span> 2027.1.3</div>
+            <ol class="itinerary">
+              <li class="itinerary-note"><span>早上自由活動</span></li>
+              <li><time>15:00</time><span>飯店大廳集合出發前往機場</span></li>
+              <li><time>17:00</time><span>起飛</span></li>
+              <li><time>19:00</time><span>回到溫暖的台中</span></li>
+            </ol>
+          </div>
           <div class="schedule-footer">SUNSHINE, SHOPPING &amp; GOOD COMPANY</div>
         </article>
 
@@ -82,6 +103,14 @@
       </section>
     </main>
     <iframe name="submit-frame" title="報名送出狀態" class="submit-frame"></iframe>
-    <script src="app.js?v=2" defer></script>
+    <dialog id="success-dialog" class="success-dialog" aria-labelledby="success-title">
+      <div class="success-dialog__content">
+        <span class="success-dialog__mark" aria-hidden="true">✓</span>
+        <h2 id="success-title">報名完成</h2>
+        <p>報名資料已送出~</p>
+        <form method="dialog"><button type="submit">確定</button></form>
+      </div>
+    </dialog>
+    <script src="app.js?v=3" defer></script>
   </body>
 </html>

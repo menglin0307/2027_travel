@@ -1,4 +1,4 @@
-const SHEET_NAME = "2027_travel";
+const SHEET_NAME = "2026_旅遊報名表";
 const HEADERS = ["姓名", "Email", "單位", "電話", "職稱", "參加人數", "報名時間"];
 
 function doPost(event) {
@@ -39,7 +39,7 @@ function getSheet_() {
   const savedId = properties.getProperty("SIGNUP_SHEET_ID");
   let spreadsheet = savedId ? SpreadsheetApp.openById(savedId) : null;
 
-  if (!spreadsheet) {
+  if (!spreadsheet || spreadsheet.getName() !== SHEET_NAME) {
     spreadsheet = SpreadsheetApp.create(SHEET_NAME);
     properties.setProperty("SIGNUP_SHEET_ID", spreadsheet.getId());
   }
